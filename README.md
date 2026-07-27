@@ -21,6 +21,7 @@ Clean, layered design ensuring traceability, reproducibility, and separation of 
 Parallel SEC API calls for DEF14A extraction and Yahoo Finance requests for market data. MERGE‑based upserts to avoid duplicates. Year‑level incremental logic for executive compensation (5‑year SCT/PvP tables)
 
 - Deployment Pipeline
+  
 Dev and Prod workspaces were used with deployment pipeline and depoloyment rules to connect the semantic model to the production lakehouse. For this purpose, the semantic model was created within the SQL analytics endpoint.
 
 - Automated Data Pipelines  
