@@ -6,6 +6,7 @@
 
 ## Objective
 This project delivers a fully automated Microsoft Fabric pipeline that ingests SEC DEF14A filings, extracts executive compensation data, enriches it with market information, and powers an interactive Power BI dashboard for executive‑level benchmarking.
+Notebooks used can be found in this reppository and include extended comments on rationales behind desgin choices during data ingestion like loading patterns.
 
 The dashboard provides pay‑for‑performance scatterplots, multi‑year CEO compensation boxplots, market‑cap segmentation charts, and percentile pay tables. Peer groups can be filtered by market cap and industry. It enables benchmarking of CEO compensation across thousands of U.S. public companies with updated data once published.
 
@@ -14,7 +15,7 @@ The pipeline includes an incremental ingestion mechanism, which scans for new fi
 The work was developed in a Fabric workspace without Git integration, requiring a manual export of all notebooks and screenshots.
 
 ## Key Features
-- Lakehouse Architecture (Bronze → Silver → Gold)  
+- Medaillon Architecture (Bronze → Silver → Gold)  
 Clean, layered design ensuring traceability, reproducibility, and separation of concerns.
 
 - Incremental & Parallel Ingestion  
