@@ -4,39 +4,33 @@
 <img width="1512" height="828" alt="Dashboard2" src="https://github.com/user-attachments/assets/423a366f-f953-41ef-9281-a3434235800e" />
 <img width="1594" height="891" alt="Dashboard3" src="https://github.com/user-attachments/assets/d283d207-fd1c-4e48-81d7-af0b6000121a" />
 
-Objective
+## Objective
 This project delivers a fully automated Microsoft Fabric pipeline that ingests SEC DEF14A filings, extracts executive compensation data, enriches it with market information, and powers an interactive Power BI dashboard for executive‑level benchmarking.
 
-The dashboard provides pay‑for‑performance scatterplots, multi‑year CEO compensation boxplots, market‑cap segmentation charts, and percentile tables. Peer groups can be filtered by market cap and industry. It enables benchmarking of CEO compensation across thousands of U.S. public companies with updated data once published.
+The dashboard provides pay‑for‑performance scatterplots, multi‑year CEO compensation boxplots, market‑cap segmentation charts, and percentile pay tables. Peer groups can be filtered by market cap and industry. It enables benchmarking of CEO compensation across thousands of U.S. public companies with updated data once published.
 
-The pipeline includes an incremental ingestion mechanism, which scans for new filings and only add compensation years from the five-year compensation disclosures (SCT + Pay-vs-Performance) not yet included in the database.
+The pipeline includes an incremental ingestion mechanism, which scans for new filings and only adds compensation years from the five-year compensation disclosures not yet included in the database. 
 
-
-This project showcases a complete end‑to‑end data solution built in Microsoft Fabric, covering data ingestion, transformation, modeling, and interactive reporting. The objective was to design a scalable, modular, and production‑ready data pipeline capable of processing both intraday stock market data and historical daily data, and delivering near real‑time insights through a Power BI dashboard.
-
-Daily stock data for the five largest U.S. companies was collected from 2011 onward, complemented by minute‑level price data for the current and most recent trading day.
-The intraday pipeline refreshes every five minutes, enabling a near real‑time analytics experience.
-
-The work was developed in a Fabric Test Workspace without Git integration, which required a fully manual export of all available assets. To preserve transparency and reproducibility, the repository includes exported notebooks, SQL logic, screenshots of the pipeline and Lakehouse structure, and a demo video of the final dashboard.
+The work was developed in a Fabric workspace without Git integration, requiring a manual export of all notebooks and screenshots.
 
 ## Key Features
 - Lakehouse Architecture (Bronze → Silver → Gold)  
 Clean, layered design ensuring traceability, reproducibility, and separation of concerns.
 
-- Deployment Pipeline (Dev → Test → Prod)  
-Designed a modular promotion flow with deployment rules to ensure stage specific lakehouse connections and parameters .
+- Incremental & Parallel Ingestion
+Parallel SEC API calls for DEF14A extraction and Yahoo Finance requests for market data. MERGE‑based upserts to avoid duplicates. Year‑level incremental logic for executive compensation (5‑year SCT/PvP tables)
 
 - Automated Data Pipelines  
 Modular ingestion and transformation logic, including deduplication, schema validation, and MERGE‑based upserts.
 
 - Data Quality Foundations  
-Checks for table existence, schema consistency, null handling and duplicates.
+Checks for table existence, schema consistency, null handling and duplicates per CIK + fiscal year.
 
 - Semantic Model for Analytics  
-Well‑structured star schema with clear relationships, optimized for performance and maintainability.
+Well‑structured star schema with clear relationships, market-cap segmentation and fiscal-year trend reporting.
 
 - Interactive Power BI Dashboard  
-Near real‑time intraday analytics, daily indicators and trend signals, volatility and momentum metrics.
+Executive compensation dashboards including pay‑for‑performance scatterplots, multi‑year CEO compensation boxplots, market‑cap segmentation charts, and percentile pay tables.
 
 
 
