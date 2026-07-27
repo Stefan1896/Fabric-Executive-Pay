@@ -46,16 +46,18 @@ The repository includes:
 ## Learnings & Next Steps
 Key Learnings:
 
-- Understanding Fabric limitations and available workarounds, such as the inability to modify notebook parameters within deployment pipelines rules. Additionally, data source deployment rules for semantic models can only be configured when the semantic model originates from an SQL endpoint.
+- Building robust incremental logic for multi‑year compensation tables
 
-- Designing scalable Lakehouse architectures, with clear separation between ingestion, transformation, and consumption layers to ensure maintainability and reproducibility.
-
-- Building modular Fabric pipelines, focusing on parallelization, reusable logic, and stage‑aware validation to support future CI/CD integration.
+- Ensuring schema stability across pipeline runs
 
 ## Future improvements could include:
 
-- CI/CD integration via GitHub or Azure DevOps
+CI/CD integration via Fabric Git mode
 
-- Expanded Data Quality rules and monitoring
+- Automated validation rules for XBRL completeness
 
-- Automated alerting for trend or volatility signals
+- Historical backfill of older DEF14A filings
+
+- Additional Gold metrics (TSR deltas, compensation ratios, peer benchmarks)
+
+- Integration with Fabric Data Activator for alerting on new filings
