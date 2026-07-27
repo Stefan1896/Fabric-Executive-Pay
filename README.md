@@ -55,7 +55,7 @@ Key Learnings:
 
 ## Future improvements could include:
 
-CI/CD integration via Fabric Git mode
+- CI/CD integration
 
 - Automated validation rules for XBRL completeness
 
