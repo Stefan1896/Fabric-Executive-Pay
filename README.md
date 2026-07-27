@@ -1,4 +1,4 @@
-# SEC Filings Executive Pay Dashboard
+# SEC Filings Executive Pay End-to-End Project
 
 <img width="1496" height="830" alt="Dashboard" src="https://github.com/user-attachments/assets/d6fedd18-70c3-4cb0-b411-9ab1ee16be8c" />
 <img width="1512" height="828" alt="Dashboard2" src="https://github.com/user-attachments/assets/423a366f-f953-41ef-9281-a3434235800e" />
