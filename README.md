@@ -4,6 +4,12 @@
 <img width="1512" height="828" alt="Dashboard2" src="https://github.com/user-attachments/assets/423a366f-f953-41ef-9281-a3434235800e" />
 <img width="1594" height="891" alt="Dashboard3" src="https://github.com/user-attachments/assets/d283d207-fd1c-4e48-81d7-af0b6000121a" />
 
+Objective
+This project delivers a fully automated Microsoft Fabric pipeline that ingests SEC DEF14A filings, extracts executive compensation data, enriches it with market information, and powers an interactive Power BI dashboard for executive‑level benchmarking.
+
+The dashboard provides pay‑for‑performance scatterplots, multi‑year CEO compensation boxplots, market‑cap segmentation charts, and percentile tables. Peer groups can be filtered by market cap and industry. It enables benchmarking of CEO compensation across thousands of U.S. public companies with updated data once published.
+
+The pipeline includes an incremental ingestion mechanism, which scans for new filings and only add compensation years from the five-year compensation disclosures (SCT + Pay-vs-Performance) not yet included in the database.
 
 
 This project showcases a complete end‑to‑end data solution built in Microsoft Fabric, covering data ingestion, transformation, modeling, and interactive reporting. The objective was to design a scalable, modular, and production‑ready data pipeline capable of processing both intraday stock market data and historical daily data, and delivering near real‑time insights through a Power BI dashboard.
